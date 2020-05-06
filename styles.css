@@ -1,0 +1,117 @@
+*,
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            background-color: rgba(140, 140, 140, 0.4);
+        }
+
+        body {
+            position: relative;
+            border: solid 1px black;
+            width: 100vw;
+            height: 100vh;
+            background-image: url(https://wallpapercave.com/wp/ke5GFrZ.jpg);
+            background-size: 100%;
+        }
+
+        .reloj {
+            width: 500px;
+            height: 500px;
+            background-color: rgba(190 , 157, 49, 1);
+            border: solid 13px black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-image: url(https://cssanimation.rocks/images/posts/clocks/ios_clock.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 90%;
+            border-radius: 100%;
+            z-index: 1;
+        }
+
+        .shadow {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background-color: rgba(0, 0, 0, 0.40); 
+            border-radius: 50%;           
+            top: 51%;
+            left: 51%;
+            transform: translate(-50%,-50%);
+            z-index:0;
+            }
+
+        .reloj__eje {
+            width: 20px;
+            height: 20px;
+            background-color: black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            z-index: 2;
+        }
+
+        .reloj__segundero {
+            width: 35%;
+            height: 3px;
+            background-color: red;
+            position: absolute;
+            top: 49%;
+            left: 50%;
+            transform-origin: 0% 50%;
+            transform: rotate(-90deg);
+            z-index: 1;
+            animation-name: movSeg;
+            animation-duration: 60s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+
+
+        .reloj__minutero {
+            width: 35%;
+            height: 8px;
+            background-color: black;
+            position: absolute;
+            top: 49%;
+            left: 50%;
+            transform-origin: 0% 50%;
+            transform: rotate(-90deg); 
+            z-index: 1;
+            animation-name: movSeg;
+            animation-duration: 120s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        .reloj__hora {
+            width: 20%;
+            height: 10px;
+            background-color: black;
+            position: absolute;
+            top: 49%;
+            left: 50%;
+            transform-origin: 0% 50%;
+            transform: rotate(-90deg);
+            z-index: 1;
+            animation-name: movSeg;
+            animation-duration: 180s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes movSeg {
+            100% {
+                transform: rotate(360deg)
+            }
+        }
